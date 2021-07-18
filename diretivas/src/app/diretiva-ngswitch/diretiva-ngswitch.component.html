@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <div class="nav navbar-nav">
+    <a class="nav-item nav-link" 
+    [class.active]="aba == 'home'"
+    (click)="aba = 'home'"
+    >Home</a>
+    <a class="nav-item nav-link"
+    [class.active]="aba == 'feature'"
+    (click)="aba = 'feature'"
+     >Features</a>
+    <a class="nav-item nav-link"
+    [class.active]="aba == 'princing'"
+    (click)="aba = 'princing'"
+     >Princing</a>
+    <a class="nav-item nav-link"
+    [class.active]="aba == 'about'"
+    (click)="aba = 'about'"
+     >About</a>
+    </div>
+  </div>  
+</nav>
+
+<div class="container"  [ngSwitch]="aba">
+  <div *ngSwitchCase="'home'">Home ativado</div>
+  <div *ngSwitchCase="'feature'">Feature ativado</div>
+  <div *ngSwitchCase="'princing'">Pricing ativado</div>
+  <div *ngSwitchCase="'about'">About ativado</div>
+  <div *ngSwitchDefault>output2</div>
+</div>
