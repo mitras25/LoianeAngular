@@ -8,8 +8,10 @@ import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch
 import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
 import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FundoAmareloDirective } from './fundo-amarelo.directive';
+import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivaCustomizadaComponent } from './diretiva-customizada/diretiva-customizada.component';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
+import { HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DiretivaCustomizadaComponent } from './diretiva-customizada/diretiva-cu
     DiretivaNgforComponent,
     DiretivaNgclassComponent,
     FundoAmareloDirective,
-    DiretivaCustomizadaComponent
+    DiretivaCustomizadaComponent,
+    HighlightMouseDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
