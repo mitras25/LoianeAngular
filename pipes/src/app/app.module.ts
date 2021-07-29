@@ -8,6 +8,7 @@ import { SettingService } from './setting.service';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { FiltroArrayPipe } from './filtro-array.pipe';
 
 registerLocaleData(localePt);
 
@@ -15,7 +16,8 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     ExemploPipeComponent,
-    CamelCasePipe
+    CamelCasePipe,
+    FiltroArrayPipe
   ],
   imports: [
     BrowserModule
