@@ -3,8 +3,9 @@
     <a routerLink="" class="brand-logo right">Rotas NG</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li> <a [routerLink]="[ '/login' ]" routerLinkActive="active">login</a></li>
-      <li><a routerLinkActive="active" routerLink="/cursos">Cursos</a></li>
+      <li><a routerLinkActive="active" routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a></li>
       <li><a [routerLink]="[ 'curso', idCurso.value ]" routerLinkActive="active">Curso com Id</a></li>
+      <li><a [routerLink]="[ '/alunos' ]" routerLinkActive="active">Alunos</a></li>
     </ul>
   </div>
 </nav>
