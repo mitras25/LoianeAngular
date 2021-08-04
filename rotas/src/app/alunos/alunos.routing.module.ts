@@ -13,7 +13,7 @@ const alunosRoutes: Routes = [
     children: [
       { path: 'novo', component: AlunoFormComponent },
       { path: ':id', component: AlunoDetalheComponent },
-      { path: ':id/edit', component: AlunoFormComponent },
+      { path: ':id/editar', component: AlunoFormComponent },
     ],
   },
 ];
