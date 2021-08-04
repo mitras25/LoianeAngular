@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -14,7 +15,8 @@ import { AlunosRoutingModule } from './alunos.routing.module';
   ],
   imports: [ 
     CommonModule,
-    AlunosRoutingModule
+    AlunosRoutingModule,
+    FormsModule
    ],
   exports: [],
   providers: [],
