@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,12 +20,14 @@ import { AlunosModule } from './alunos/alunos.module';
    // CursosComponent,
    // CursosDetalheComponent,
    // CursosNaoencontradoComponent,
+   
     
   ],
   imports: [
     BrowserModule,
     CursosModule,
     AlunosModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
