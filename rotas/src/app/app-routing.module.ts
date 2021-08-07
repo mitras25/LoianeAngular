@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth-guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -8,8 +9,9 @@ import { LoginComponent } from './login/login.component';
 //mport { CursosNaoencontradoComponent } from './cursos/cursos-naoencontrado/cursos-naoencontrado.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent,
+    canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent},
   //{path: 'cursos', component: CursosComponent},
   //{path: 'curso/:id', component: CursosDetalheComponent},
   //{path: 'naoEncontrado', component: CursosNaoencontradoComponent},

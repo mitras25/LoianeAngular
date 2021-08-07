@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlunosComponent } from './alunos.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
+import { AuthGuard } from '../guards/auth-guard';
+import { AluoDetalheResolver } from './guards/aluno-detalhe.resolve';
 
 const alunosRoutes: Routes = [
   {
@@ -12,9 +14,11 @@ const alunosRoutes: Routes = [
     component: AlunosComponent,
     children: [
       { path: 'novo', component: AlunoFormComponent },
-      { path: ':id', component: AlunoDetalheComponent },
+      { path: ':id', component: AlunoDetalheComponent,
+          resolve: {alunoResolve: AluoDetalheResolver} },
       { path: ':id/editar', component: AlunoFormComponent },
     ],
+    canActivate: [AuthGuard]
   },
 ];
 
