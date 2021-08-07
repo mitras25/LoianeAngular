@@ -8,8 +8,8 @@ import { LoginComponent } from './login/login.component';
 //mport { CursosNaoencontradoComponent } from './cursos/cursos-naoencontrado/cursos-naoencontrado.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
+  {path: 'home', component: HomeComponent},
   //{path: 'cursos', component: CursosComponent},
   //{path: 'curso/:id', component: CursosDetalheComponent},
   //{path: 'naoEncontrado', component: CursosNaoencontradoComponent},
