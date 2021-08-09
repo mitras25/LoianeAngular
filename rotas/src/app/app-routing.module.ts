@@ -9,9 +9,11 @@ import { LoginComponent } from './login/login.component';
 //mport { CursosNaoencontradoComponent } from './cursos/cursos-naoencontrado/cursos-naoencontrado.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent,
-    canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent,
+    canActivate: [AuthGuard]},
+  {path: '**', component: LoginComponent},
+  
   //{path: 'cursos', component: CursosComponent},
   //{path: 'curso/:id', component: CursosDetalheComponent},
   //{path: 'naoEncontrado', component: CursosNaoencontradoComponent},
